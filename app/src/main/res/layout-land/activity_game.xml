@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.netbook.hangman.GameActivity"
+    android:weightSum="1"
+    android:id="@+id/RelativeLayout"
+    android:orientation="horizontal"
+    android:background="@color/material_blue_grey_800">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_word"
+        android:text="New Text"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_source"
+        android:maxLines="1"
+        android:maxLength="1"
+        android:maxHeight="1dp"
+        android:inputType="textCapCharacters"
+        android:layout_gravity="left"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/display_word"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_button"
+        android:id="@+id/guess_button"
+        android:onClick="guess_button"
+        android:layout_alignTop="@+id/input_source"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/input_source"
+        android:layout_alignEnd="@+id/input_source">
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:id="@+id/HangmanImage"
+        android:src="@drawable/hangman6"
+        android:layout_above="@+id/guess_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
